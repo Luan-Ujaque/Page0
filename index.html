@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luan.ujk - FrontChallenge</title>
+</head>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Work+Sans:wght@700&display=swap');
+  
+  body {
+    margin: 0;
+    background-color: rgb(244, 232, 255);
+    overflow: hidden;
+    min-height: 100vh;
+  }
+
+#bg-img {
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
+  max-height: 200px;  
+}
+
+#container {
+  position: relative;
+  background-color: white;
+  width: 500px;
+  height: auto;
+  border-radius: 10px;
+  margin: auto;
+  margin-top: -100px;
+  overflow: auto;
+  margin-bottom: 20px;
+}
+
+#faq {
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 50px;
+  margin: 0px;
+}
+
+.textos-internos {
+  padding: 25px;
+  font-size: 12px;
+  font-family: 'poppins', sans-serif;
+}
+
+.perguntas {
+  font-weight: 900;
+  padding: 15px 0 15px 0;
+  font-size: 13px;
+  cursor:pointer;
+}
+
+.perguntas:hover {
+  color: blueviolet;
+  font-weight: 700;
+}
+
+#resposta1, #resposta2, #resposta3, #resposta4 {
+  color:rgb(156, 156, 156);
+  font-family: 'poppins', sans-serif;
+  display: none;
+  padding: 0 0 10px 0;
+}
+
+.line {
+  width: auto;
+  border: 1px solid rgb(214, 214, 214);
+}
+
+#plus1, #plus2, #plus3, #plus4 {
+  float: right;
+}
+
+#rodape {
+  background-color: #333;
+  color: white;
+  padding: 2px;
+  border-radius: 5px;
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  margin: auto;
+}
+
+
+@media only screen and (max-width: 600px) {
+  #bg-img {
+  width: 100vw;
+  height: 300px;
+  object-fit: cover;
+}
+
+  #container {
+  position: relative;
+  background-color: white;
+  width: 400px;
+  height: auto;
+  border-radius: 10px;
+  margin: auto;
+  margin-top: -100px;
+  overflow: auto;
+  margin-bottom: 20px;
+}
+
+.perguntas {
+  font-weight: 900;
+  padding: 15px 0 15px 0;
+  font-size: 10px;
+  cursor:pointer;
+}
+
+#resposta1, #resposta2, #resposta3, #resposta4 {
+  color:rgb(156, 156, 156);
+  font-family: 'poppins', sans-serif;
+  display: none;
+  padding: 0 0 10px 0;
+  font-size: 10px;
+}
+
+#rodape {
+  font-size: 8px;
+}
+}
+
+</style>
+
+<body>
+  <div id="img-div"><img src="assets\images\background-pattern-desktop.svg" alt="Background image" id="bg-img" ></div>
+    <div id="container">
+      <div class="textos-internos">
+      <h2 id="faq"><img src="assets\images\icon-star.svg" alt="" id="star"> FAQs</h2>
+
+      
+      <p class="perguntas">What is Frontend Mentor, and how will it help me? <img src="assets\images\icon-plus.svg" alt="" id="plus1" onclick="toggleTexto('resposta1', 'plus1')"></p>
+
+      <p id="resposta1">Frontend Mentor offers realistic coding challenges to help developers improve their 
+        frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for 
+        all levels and ideal for portfolio building.</p>
+      
+        <div class="line"></div>
+        
+      <p class="perguntas">Is Frontend Mentor free? <img src="assets\images\icon-plus.svg" alt="" id="plus2" onclick="toggleTexto('resposta2', 'plus2')"></p>
+      
+      <p id="resposta2">Yes, Frontend Mentor offers both free and premium coding challenges, with the free 
+        option providing access to a range of projects suitable for all skill levels.</p>
+
+        <div class="line"></div>
+
+        <p class="perguntas">Can I use Frontend Mentor projects in my portfolio? <img src="assets\images\icon-plus.svg" alt="" id="plus3" onclick="toggleTexto('resposta3', 'plus3')"></p>
+      
+        <p id="resposta3">Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent
+          way to showcase your skills to potential employers!</p>
+
+          <div class="line"></div>
+
+          <p class="perguntas">How can I get help if I'm stuck on a Frontend Mentor challenge? <img src="assets\images\icon-plus.svg" alt="" id="plus4" onclick="toggleTexto('resposta4', 'plus4')"></p>
+      
+          <p id="resposta4">The best place to get help is inside Frontend Mentor's Discord community. There's a help 
+            channel where you can ask questions and seek support from other community members.</p> 
+      
+
+        <div id="rodape">
+          Feito com ♥ por @Luan.ujk
+        </div>
+
+      <script>
+        function toggleTexto(idResposta, idIcon) {
+          let resposta = document.getElementById(idResposta);
+          let icon = document.getElementById(idIcon);
+      
+          if (resposta.style.display === 'none' || resposta.style.display === '') {
+            resposta.style.display = 'block';
+            icon.src = "assets/images/icon-minus.svg";
+          } else {
+            resposta.style.display = 'none';
+            icon.src = "assets/images/icon-plus.svg";
+          }
+        }
+
+      </script>
+      
+    
+
+
+    </script>
+  </body>
+  </html>
